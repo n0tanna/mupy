@@ -1,0 +1,2 @@
+class IncorrectConversionTypeError(Exception):
+    pass

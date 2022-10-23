@@ -1,0 +1,2 @@
+class IncorrectExponentFormatError(Exception):
+    pass

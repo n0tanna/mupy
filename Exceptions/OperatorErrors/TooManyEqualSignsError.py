@@ -1,0 +1,2 @@
+class TooManyEqualSignsError(Exception):
+    pass

@@ -1,0 +1,2 @@
+class IncorrectDecimalFormatError(Exception):
+    pass

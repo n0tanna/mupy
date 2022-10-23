@@ -1,0 +1,2 @@
+class NoOpeningParenthesisError(Exception):
+    pass

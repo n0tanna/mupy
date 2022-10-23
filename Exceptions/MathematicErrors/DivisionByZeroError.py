@@ -1,0 +1,2 @@
+class DivisionByZeroError(Exception):
+    pass

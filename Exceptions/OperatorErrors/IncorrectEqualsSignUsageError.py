@@ -1,0 +1,2 @@
+class IncorrectEqualsSignUsageError(Exception):
+    pass
