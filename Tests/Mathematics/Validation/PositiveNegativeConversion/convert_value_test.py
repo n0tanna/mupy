@@ -1,5 +1,5 @@
 import pytest
-from Exceptions.ValidationErrors.IncorrectConversionTypeError import IncorrectConversionTypeError
+from Exceptions.ValidationErrors.MathematicsValidation.IncorrectConversionTypeError import IncorrectConversionTypeError
 from Mathematics.Calculations.PositiveNegativeConversion import PositiveNegativeConversion
 
 

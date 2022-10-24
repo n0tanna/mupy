@@ -1,4 +1,4 @@
-from Exceptions.ValidationErrors.IncorrectConversionTypeError import IncorrectConversionTypeError
+from Exceptions.ValidationErrors.MathematicsValidation.IncorrectConversionTypeError import IncorrectConversionTypeError
 
 
 class PositiveNegativeConversion:

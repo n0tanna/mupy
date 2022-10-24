@@ -1,7 +1,7 @@
 from Mathematics.Calculations.Reciprocal import Reciprocal
 from Mathematics.Calculations.PositiveNegativeConversion import PositiveNegativeConversion
 from Exceptions.MathematicErrors.DivisionByZeroError import DivisionByZeroError
-from Exceptions.ValidationErrors.IncorrectExponentFormatError import IncorrectExponentFormatError
+from Exceptions.ValidationErrors.MathematicsValidation.IncorrectExponentFormatError import IncorrectExponentFormatError
 
 
 class Bedmas:

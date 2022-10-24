@@ -4,7 +4,7 @@ from Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharact
 from Exceptions.OperatorErrors.OperatorWithNoValuesError import OperatorWithNoValuesError
 from Mathematics.Calculations.PositiveNegativeConversion import PositiveNegativeConversion
 from Exceptions.OperatorErrors.NoOperatorError import NoOperatorError
-from Exceptions.ValidationErrors.IncorrectDecimalFormatError import IncorrectDecimalFormatError
+from Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError import IncorrectDecimalFormatError
 
 
 class ConstantEquationValidation:

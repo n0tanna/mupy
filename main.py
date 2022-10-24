@@ -2,6 +2,7 @@
 from Mathematics.Validation.Parentheses import Parentheses
 from Mathematics.Validation.ConstantEquationValidation import ConstantEquationValidation
 from Mathematics.Calculations.Evaluate import Evaluate
+from Mathematics.Validation.VariableEquationValidation import VariableEquationValidation
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.

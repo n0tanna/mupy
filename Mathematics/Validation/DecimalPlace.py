@@ -1,4 +1,4 @@
-from Exceptions.ValidationErrors.IncorrectDecimalFormatError import IncorrectDecimalFormatError
+from Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError import IncorrectDecimalFormatError
 
 
 class DecimalPlace:

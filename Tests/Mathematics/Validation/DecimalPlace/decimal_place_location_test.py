@@ -1,6 +1,6 @@
 import pytest
 from Mathematics.Validation.DecimalPlace import DecimalPlace
-from Exceptions.ValidationErrors.IncorrectDecimalFormatError import IncorrectDecimalFormatError
+from Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError import IncorrectDecimalFormatError
 
 
 def test_decimal_place_location_incorrect_decimal_format1():

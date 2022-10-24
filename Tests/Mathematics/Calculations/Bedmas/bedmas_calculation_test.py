@@ -1,6 +1,6 @@
 import pytest
 from Mathematics.Calculations.Bedmas import Bedmas
-from Exceptions.ValidationErrors.IncorrectExponentFormatError import IncorrectExponentFormatError
+from Exceptions.ValidationErrors.MathematicsValidation.IncorrectExponentFormatError import IncorrectExponentFormatError
 from Exceptions.MathematicErrors.DivisionByZeroError import DivisionByZeroError
 
 
