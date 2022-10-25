@@ -299,6 +299,12 @@ def test_constant_equation_validation_incorrect_character3():
         assert ConstantEquationValidation.constant_equation_validation(equation)
 
 
+def test_constant_equation_validation_incorrect_character4():
+    equation = ['[']
+    with pytest.raises(IncorrectCharacterError):
+        assert ConstantEquationValidation.constant_equation_validation(equation)
+
+
 # NO OPERATOR ERROR
 def test_constant_equation_validation_no_operator1():
     equation = ['(', '(', '(', '1', '.', '2', '-', '1', ')', '/', '3', '.', '5', ')', '4', ')']
@@ -308,6 +314,18 @@ def test_constant_equation_validation_no_operator1():
 
 def test_constant_equation_validation_no_operator2():
     equation = ['(', '(', '1', '.', '2', '-', '1', ')', '/', '3', '.', '5', ')', '4']
+    with pytest.raises(NoOperatorError):
+        assert ConstantEquationValidation.constant_equation_validation(equation)
+
+
+def test_variable_equation_validation_no_operator3():
+    equation = ['(', '(', '1', '.', '2', '-', '1', ')', '/', '3', '.', '5', ')', '6', '.', '4']
+    with pytest.raises(NoOperatorError):
+        assert ConstantEquationValidation.constant_equation_validation(equation)
+
+
+def test_variable_equation_validation_no_operator4():
+    equation = ['(', '(', '1', '.', '2', '-', '1', ')', '/', '3', '.', '5', ')', '4', '3', '2']
     with pytest.raises(NoOperatorError):
         assert ConstantEquationValidation.constant_equation_validation(equation)
 
@@ -333,6 +351,18 @@ def test_constant_equation_validation_operator_no_value3():
 
 def test_constant_equation_validation_operator_no_value4():
     equation = ['/']
+    with pytest.raises(OperatorWithNoValuesError):
+        assert ConstantEquationValidation.constant_equation_validation(equation)
+
+
+def test_constant_equation_validation_operator_no_value5():
+    equation = ['(', '2', '+', '2', ')', '/']
+    with pytest.raises(OperatorWithNoValuesError):
+        assert ConstantEquationValidation.constant_equation_validation(equation)
+
+
+def test_constant_equation_validation_operator_no_value6():
+    equation = ['2', '+', '2', '/']
     with pytest.raises(OperatorWithNoValuesError):
         assert ConstantEquationValidation.constant_equation_validation(equation)
 

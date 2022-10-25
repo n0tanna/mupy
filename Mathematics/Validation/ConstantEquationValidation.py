@@ -64,8 +64,13 @@ class ConstantEquationValidation:
 
                     current_number = ''
 
-                elif current_char == '+' or current_char == '-' or current_char == '*' or current_char == '/' or current_char == '^':
-                    number = 0
+                elif index == equation_length - 1:
+                    if current_char == '+' or current_char == '-' or current_char == '*' or current_char == '/' or \
+                            current_char == '^':
+                        raise OperatorWithNoValuesError
+
+                elif current_char == '+' or current_char == '-' or current_char == '*' or current_char == '/' or \
+                        current_char == '^':
                     DecimalPlace.decimal_place_location(current_number)
 
                     if is_positive:
@@ -97,6 +102,13 @@ class ConstantEquationValidation:
 
                 elif current_char == ')':
                     validated_equation.append(')')
+
+                elif index == equation_length - 1:
+                    if current_char == '+' or current_char == '-' or current_char == '*' or current_char == '/' or current_char == '^':
+                        raise OperatorWithNoValuesError
+
+                    elif not current_char.isalnum() and not current_char == '(' and not current_char == ')':
+                        raise IncorrectCharacterError
 
                 elif equation_length > 0 and equation_length > index:
                     if equation[index - 1] == ')' and equation[index + 1] == '(':
@@ -181,7 +193,7 @@ class ConstantEquationValidation:
                 number = PositiveNegativeConversion.convert_value('-', current_number)
                 validated_equation.extend(['+', number])
 
-            elif equation[len(equation) - 2] == ')':
+            elif validated_equation[len(validated_equation) - 1] == ')':
                 raise NoOperatorError
 
             else:
