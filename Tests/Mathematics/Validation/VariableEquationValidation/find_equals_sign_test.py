@@ -22,4 +22,4 @@ def test_find_equals_sign1():
 
 def test_find_equals_sign_no_sign1():
     equation = ['(', '2', '+', '2', ')', 'a']
-    assert VariableEquationValidation.find_equals_sign(equation) == True
+    assert VariableEquationValidation.find_equals_sign(equation) == False

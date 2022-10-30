@@ -1,4 +1,7 @@
 from Mathematics.Validation.VariableEquationValidation import VariableEquationValidation
+from Mathematics.Validation.FindVariables import FindVariables
+from Mathematics.Validation.Parentheses import Parentheses
+
 
 class SolveVariables:
     @staticmethod
@@ -8,7 +11,7 @@ class SolveVariables:
 
         if variables:
             variables = variables.replace(' ', '')
-            variables = list(variables)
+            variables = sorted(set(variables))
             find_variables = VariableEquationValidation.find_variable_values(equation, variables)
 
             if find_variables:
@@ -20,23 +23,19 @@ class SolveVariables:
                     left_equation_validation = VariableEquationValidation.variable_equation_validation(split_equations[0])
                     right_equation_validation = VariableEquationValidation.variable_equation_validation(split_equations[1])
 
-                    equations = [left_equation_validation, right_equation_validation]
-
                 else:
                     equation = VariableEquationValidation.variable_equation_validation(equation)
 
         else:
+            get_variables = FindVariables.find_equations_variables(equation)
             find_equals_sign = VariableEquationValidation.find_equals_sign(equation)
 
-            if not find_equals_sign:
+            if find_equals_sign:
                 split_equations = VariableEquationValidation.split_equation(equation, find_equals_sign)
 
                 left_equation_validation = VariableEquationValidation.variable_equation_validation(split_equations[0])
                 right_equation_validation = VariableEquationValidation.variable_equation_validation(split_equations[1])
 
-                equations = [left_equation_validation, right_equation_validation]
-
             else:
                 equation = VariableEquationValidation.variable_equation_validation(equation)
-
 

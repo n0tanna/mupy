@@ -13,7 +13,7 @@ class VariableEquationValidation:
     @staticmethod
     def find_equals_sign(equation: list):
         equation_length = len(equation)
-        no_equals_sign = False
+        no_equals_sign = True
 
         for index in range(equation_length):
             if index == 0 and equation[index] == '=':
@@ -26,7 +26,7 @@ class VariableEquationValidation:
                 return index
 
             else:
-                no_equals_sign = True
+                no_equals_sign = False
 
         return no_equals_sign
 
