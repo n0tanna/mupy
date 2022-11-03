@@ -1,6 +1,6 @@
 import pytest
 from Exceptions.ValidationErrors.MathematicsValidation.IncorrectConversionTypeError import IncorrectConversionTypeError
-from Mathematics.Calculations.PositiveNegativeConversion import PositiveNegativeConversion
+from Mathematics.ToBeRemoved.PositiveNegativeConversion import PositiveNegativeConversion
 
 
 def test_convert_value_positive1():

@@ -11,5 +11,5 @@ def test_find_equations_variables1():
 
 def test_find_equations_variables_no_variables_to_solve1():
     equation = ['2', '+', '3', '=', '2', '+', '4']
-    with pytest.raises(NoVariablesToSolveError):
-        assert FindVariables.find_equations_variables(equation)
+    answer = FindVariables.find_equations_variables(equation)
+    assert answer == []

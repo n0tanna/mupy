@@ -1,6 +1,6 @@
 import pytest
 
-from Mathematics.Validation.ConstantEquationValidation import ConstantEquationValidation
+from Mathematics.ToBeRemoved.ConstantEquationValidation import ConstantEquationValidation
 from Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError import IncorrectDecimalFormatError
 from Exceptions.OperatorErrors.OperatorWithNoValuesError import OperatorWithNoValuesError
 from Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharacterError

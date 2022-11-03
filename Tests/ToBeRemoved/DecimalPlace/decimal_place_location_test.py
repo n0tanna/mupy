@@ -1,5 +1,5 @@
 import pytest
-from Mathematics.Validation.DecimalPlace import DecimalPlace
+from Mathematics.ToBeRemoved.DecimalPlace import DecimalPlace
 from Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError import IncorrectDecimalFormatError
 
 

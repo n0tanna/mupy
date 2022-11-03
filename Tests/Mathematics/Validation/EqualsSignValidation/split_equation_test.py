@@ -1,4 +1,4 @@
-from Mathematics.Validation.VariableEquationValidation import VariableEquationValidation
+from Mathematics.ToBeRemoved.VariableEquationValidation import VariableEquationValidation
 
 
 def test_split_equation1():

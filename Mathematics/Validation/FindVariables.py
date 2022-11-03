@@ -16,6 +16,6 @@ class FindVariables:
             variable_list = sorted(variable_list)
 
         else:
-            raise NoVariablesToSolveError
+            variable_list = []
 
         return variable_list

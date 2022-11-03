@@ -3,7 +3,7 @@ from Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatErr
 from Exceptions.OperatorErrors.OperatorWithNoValuesError import OperatorWithNoValuesError
 from Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharacterError
 from Exceptions.OperatorErrors.NoOperatorError import NoOperatorError
-from Mathematics.Validation.VariableEquationValidation import VariableEquationValidation
+from Mathematics.ToBeRemoved.VariableEquationValidation import VariableEquationValidation
 
 
 # SINGLE DIGIT TESTS
@@ -104,6 +104,12 @@ def test_variable_equation_validation_exponent1():
     equation = ['1', '^', '1']
     validated_equation = VariableEquationValidation.variable_equation_validation(equation)
     assert validated_equation == [1.0, '^', 1.0]
+
+
+def test_variable_equation_validation_exponent2():
+    equation = ['x', '^', '1']
+    validated_equation = VariableEquationValidation.variable_equation_validation(equation)
+    assert validated_equation == ['x', '^', 1.0]
 
 
 # PARENTHESIS TESTS

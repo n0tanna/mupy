@@ -1,5 +1,5 @@
 from Mathematics.Calculations.Reciprocal import Reciprocal
-from Mathematics.Calculations.PositiveNegativeConversion import PositiveNegativeConversion
+from Mathematics.ToBeRemoved.PositiveNegativeConversion import PositiveNegativeConversion
 from Exceptions.MathematicErrors.DivisionByZeroError import DivisionByZeroError
 from Exceptions.ValidationErrors.MathematicsValidation.IncorrectExponentFormatError import IncorrectExponentFormatError
 
