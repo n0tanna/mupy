@@ -155,6 +155,10 @@ class EquationValidation:
                                 if validated_equation[len(validated_equation) - 1].isalpha():
                                     validated_equation.append('*')
 
+                                elif GroupingIdentifiers.has_right_value(
+                                        validated_equation[len(validated_equation) - 1]):
+                                    raise NoOperatorError
+
                         validated_equation.append('(')
 
                     elif current_char.isalpha():

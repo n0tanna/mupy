@@ -1,13 +1,18 @@
 from Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
+from Exceptions.OperatorErrors.TooManyEqualSignsError import TooManyEqualSignsError
 
 
 class EqualsSignValidation:
+    @staticmethod
+    def find_equality_signs(equation: list, character: str):
+        return [i for i, letter in enumerate(equation) if letter == character]
+
     @staticmethod
     def amount_of_equal_signs(equation: list):
         equals_sign_amount = equation.count('=')
 
         if equals_sign_amount > 1:
-            raise IncorrectEqualsSignUsageError
+            raise TooManyEqualSignsError
 
         elif equals_sign_amount == 0:
             return False
