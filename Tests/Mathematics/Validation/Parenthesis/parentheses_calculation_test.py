@@ -1,4 +1,4 @@
-from Mathematics.Validation.Parentheses import Parentheses
+from Mathematics.Eval.Parentheses import Parentheses
 
 
 def test_parentheses_addition1():

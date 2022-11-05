@@ -1,4 +1,4 @@
-from Mathematics.Validation.Parentheses import Parentheses
+from Mathematics.Eval.Parentheses import Parentheses
 
 
 def test_calculate_while_parentheses_exist_one_set1():

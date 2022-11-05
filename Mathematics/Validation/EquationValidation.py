@@ -1,4 +1,4 @@
-from Mathematics.Validation.Parentheses import Parentheses
+from Mathematics.Eval.Parentheses import Parentheses
 from Mathematics.Validation.EqualsSignValidation import EqualsSignValidation
 from Mathematics.Enums.Operators import Operators
 from Mathematics.Enums.GroupingIdentifers import GroupingIdentifiers

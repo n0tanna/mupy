@@ -1,4 +1,4 @@
-from Mathematics.Validation.Parentheses import Parentheses
+from Mathematics.Eval.Parentheses import Parentheses
 from Mathematics.Validation.EquationValidation import EquationValidation
 from Mathematics.Calculations.Bedmas import Bedmas
 
