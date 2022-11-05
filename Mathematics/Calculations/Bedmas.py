@@ -1,7 +1,6 @@
 from Mathematics.Calculations.Reciprocal import Reciprocal
-from Mathematics.Calculations.PositiveNegativeConversion import PositiveNegativeConversion
 from Exceptions.MathematicErrors.DivisionByZeroError import DivisionByZeroError
-from Exceptions.ValidationErrors.IncorrectExponentFormatError import IncorrectExponentFormatError
+from Exceptions.ValidationErrors.MathematicsValidation.IncorrectExponentFormatError import IncorrectExponentFormatError
 
 
 class Bedmas:
@@ -87,7 +86,7 @@ class Bedmas:
 
                     if right_term < 0:
                         reciprocal = True
-                        right_term = PositiveNegativeConversion.convert_value('-', right_term)
+                        right_term *= -1
 
                     elif not float(right_term).is_integer():
                         raise IncorrectExponentFormatError
@@ -101,7 +100,7 @@ class Bedmas:
                         answer = Reciprocal.get_reciprocal(answer)
 
                     if left_term < 0:
-                        answer = PositiveNegativeConversion.convert_value('-', answer)
+                        answer *= -1
 
                     equation = Bedmas.replace_values(equation, '^', answer)
 

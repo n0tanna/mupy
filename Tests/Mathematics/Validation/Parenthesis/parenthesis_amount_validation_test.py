@@ -1,5 +1,5 @@
 import pytest
-from Mathematics.Validation.Parentheses import Parentheses
+from Mathematics.Eval.Parentheses import Parentheses
 from Exceptions.ValidationErrors.NoClosingParenthesisError import NoClosingParenthesisError
 from Exceptions.ValidationErrors.NoOpeningParenthesisError import NoOpeningParenthesisError
 

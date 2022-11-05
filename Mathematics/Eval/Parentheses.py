@@ -7,16 +7,8 @@ from Mathematics.Calculations.Bedmas import Bedmas
 class Parentheses:
     @staticmethod
     def parenthesis_amount_validation(equation: list):
-        equation_length = len(equation)
-        left_parenthesis = 0
-        right_parenthesis = 0
-
-        for index in range(equation_length):
-            if equation[index] == '(':
-                left_parenthesis += 1
-
-            elif equation[index] == ')':
-                right_parenthesis += 1
+        left_parenthesis = equation.count('(')
+        right_parenthesis = equation.count(')')
 
         if left_parenthesis == right_parenthesis and not left_parenthesis == 0 and not right_parenthesis == 0:
             return True

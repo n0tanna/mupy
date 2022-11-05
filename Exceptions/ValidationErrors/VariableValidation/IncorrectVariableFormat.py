@@ -1,0 +1,2 @@
+class IncorrectVariableFormat(Exception):
+    pass
