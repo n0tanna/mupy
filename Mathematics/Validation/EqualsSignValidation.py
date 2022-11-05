@@ -4,10 +4,6 @@ from Exceptions.OperatorErrors.TooManyEqualSignsError import TooManyEqualSignsEr
 
 class EqualsSignValidation:
     @staticmethod
-    def find_equality_signs(equation: list, character: str):
-        return [i for i, letter in enumerate(equation) if letter == character]
-
-    @staticmethod
     def amount_of_equal_signs(equation: list):
         equals_sign_amount = equation.count('=')
 
