@@ -1,28 +1,39 @@
 from Mathematics.Eval.Parentheses import Parentheses
 from Mathematics.Validation.EquationValidation import EquationValidation
 from Mathematics.Calculations.Bedmas import Bedmas
+from Mathematics.Eval.Classification import Classification
+from Mathematics.Enums.EquationIdentifers import EquationIdentifiers
 
 
 class Evaluate:
     @staticmethod
-    def evaluate(equation: str):
+    def evaluate(equation: str, variables=None):
+        if variables is None:
+            variables = []
+
         equation = equation.replace(' ', '')
         equation = list(equation)
-        validated_equation = EquationValidation.equation_validation(equation)
-        get_key = validated_equation["equation"]
-        has_parentheses = get_key[1]
+        equation_type = Classification.determine_classification(equation, variables)
 
-        if not has_parentheses:
-            calculated_answer = Bedmas.bedmas_calculation(get_key[0])
+        if equation_type is EquationIdentifiers.VARIABLES:
+            pass
 
-        else:
-            calculated_answer = Parentheses.calculate_while_parentheses_exist(get_key[0])
+        elif equation_type is EquationIdentifiers.EQUATION:
+            validated_equation = EquationValidation.equation_validation(equation)
+            get_key = validated_equation["equation"]
+            has_parentheses = get_key[1]
 
-            if calculated_answer.is_integer():
-                calculated_answer = int(calculated_answer)
+            if not has_parentheses:
+                calculated_answer = Bedmas.bedmas_calculation(get_key[0])
 
-        return calculated_answer
+            else:
+                calculated_answer = Parentheses.calculate_while_parentheses_exist(get_key[0])
 
+                if calculated_answer.is_integer():
+                    calculated_answer = int(calculated_answer)
 
+            return calculated_answer
 
+        elif equation_type is EquationIdentifiers.COMPARISON:
+            pass
 
