@@ -5,6 +5,7 @@ class EquationIdentifiers(Enum):
     EQUATION = "EQUATION"
     VARIABLES = "VARIABLES"
     COMPARISON = "COMPARISON"
+    COMPARISON_VARIABLES = "COMPARISON_VARIABLES"
 
     @classmethod
     def has_value(cls, value):
