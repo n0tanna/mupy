@@ -5,7 +5,7 @@ from Mathematics.Calculations.Bedmas import Bedmas
 
 class Evaluate:
     @staticmethod
-    def evaluate(equation: str):
+    def evaluate(equation: str, variables=''):
         equation = equation.replace(' ', '')
         equation = list(equation)
         validated_equation = EquationValidation.equation_validation(equation)

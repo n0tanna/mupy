@@ -1,7 +1,8 @@
 # This is a sample Python script.
 from Mathematics.Eval.Evaluate import Evaluate
+from Mathematics.Eval.Classification import Classification
 
-number = Evaluate.evaluate("(2)(3)")
+number = Classification.determine_classification(['2', '>', '2'])
 print(number)
 
 print("aa")
