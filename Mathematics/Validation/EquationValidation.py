@@ -2,6 +2,7 @@ from Mathematics.Eval.Parentheses import Parentheses
 from Mathematics.Validation.EqualsSignValidation import EqualsSignValidation
 from Mathematics.Enums.Operators import Operators
 from Mathematics.Enums.GroupingIdentifers import GroupingIdentifiers
+from Mathematics.Enums.EquationIdentifers import EquationIdentifiers
 from Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharacterError
 from Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError import IncorrectDecimalFormatError
 from Exceptions.OperatorErrors.OperatorWithNoValuesError import OperatorWithNoValuesError

@@ -15,22 +15,22 @@ class GroupingIdentifiers(Enum):
 
     @classmethod
     def has_left_value(cls, value):
-        if value is '(':
+        if value == '(':
             return value in cls._value2member_map_
 
-        elif value is '[':
+        elif value == '[':
             return value in cls._value2member_map_
 
-        elif value is '{':
+        elif value == '{':
             return value in cls._value2member_map_
 
     @classmethod
     def has_right_value(cls, value):
-        if value is ')':
+        if value == ')':
             return value in cls._value2member_map_
 
-        elif value is ']':
+        elif value == ']':
             return value in cls._value2member_map_
 
-        elif value is '}':
+        elif value == '}':
             return value in cls._value2member_map_

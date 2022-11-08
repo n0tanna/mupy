@@ -1,8 +1,10 @@
 # This is a sample Python script.
 from Mathematics.Eval.Evaluate import Evaluate
 from Mathematics.Eval.Classification import Classification
+from Mathematics.Validation.ComparisonValidation import ComparisonValidation
 
-number = Classification.determine_classification(['2', '3', '!', '=', '3', '6', '='])
+equation = list('1+1>2+3')
+number = ComparisonValidation.split_equation(equation)
 print(number)
 
 print("aa")
