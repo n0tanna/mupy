@@ -34,7 +34,6 @@ class VariableInputParser:
                 equal_sign_found = False
 
                 if variable_value:
-                    variable_value = EquationValidation.equation_validation(list(variable_value))
                     variables_and_values[current_variable] = variable_value
 
                 else:
@@ -47,7 +46,6 @@ class VariableInputParser:
             variables_and_values[current_variable] = ''
 
         else:
-            variable_value = EquationValidation.equation_validation(list(variable_value))
             variables_and_values[current_variable] = variable_value
 
         return variables_and_values

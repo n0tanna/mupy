@@ -203,3 +203,57 @@ def test_evaluate_comparison21():
     equation = "10>=100"
     answer = Evaluate.evaluate(equation)
     assert answer is False
+
+
+def test_evaluate_variable_comparison1():
+    equation = "10b==100"
+    answer = Evaluate.evaluate(equation, "b=10")
+    assert answer is True
+
+
+def test_evaluate_variable_comparison2():
+    equation = "10b==100"
+    answer = Evaluate.evaluate(equation, "b=4")
+    assert answer is False
+
+
+def test_evaluate_variable_comparison3():
+    equation = "10b!=100"
+    answer = Evaluate.evaluate(equation, "b=4")
+    assert answer is True
+
+
+def test_evaluate_variable_comparison4():
+    equation = "10b^a <= 100^a"
+    answer = Evaluate.evaluate(equation, "a=10,b=4")
+    assert answer is True
+
+
+def test_evaluate_variable_comparison5():
+    equation = "10b^a <= 100"
+    answer = Evaluate.evaluate(equation, "a=10,b=4")
+    assert answer is False
+
+
+def test_evaluate_variable_comparison6():
+    equation = "10b^a <= 100"
+    answer = Evaluate.evaluate(equation, "a=10,b=4")
+    assert answer is False
+
+
+def test_evaluate_variable_comparison7():
+    equation = "10 + 2(a + 2) < 100"
+    answer = Evaluate.evaluate(equation, "a=10")
+    assert answer is True
+
+
+def test_evaluate_variable_comparison8():
+    equation = "10 + 2(a + 2) > 100"
+    answer = Evaluate.evaluate(equation, "a=10")
+    assert answer is False
+
+
+def test_evaluate_variable_comparison9():
+    equation = "10 + 2(a + 2) > 100"
+    answer = Evaluate.evaluate(equation, "a=100")
+    assert answer is True

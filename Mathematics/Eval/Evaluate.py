@@ -5,6 +5,8 @@ from Mathematics.Eval.Classification import Classification
 from Mathematics.Enums.EquationIdentifers import EquationIdentifiers
 from Mathematics.Validation.ComparisonValidation import ComparisonValidation
 from Mathematics.Eval.Comparison import Comparison
+from Mathematics.Validation.VariableInputParser import VariableInputParser
+from Mathematics.Calculations.ReplaceVariables import ReplaceVariables
 
 
 class Evaluate:
@@ -31,7 +33,8 @@ class Evaluate:
             variables = []
 
         else:
-            pass
+            variables = variables.replace(' ', '')
+            variables = VariableInputParser.variable_input_parser(variables)
 
         equation = equation.replace(' ', '')
         equation = list(equation)
@@ -58,9 +61,15 @@ class Evaluate:
             return response
 
         elif equation_type is EquationIdentifiers.COMPARISON_VARIABLES:
-            split_equation = ComparisonValidation.split_comparison(equation)
-            left_equation = split_equation["left_equation"]
-            right_equation = split_equation["right_equation"]
+            replace_variables = ReplaceVariables.replace_variables(equation, variables, equation_type)
+            split_equation = ComparisonValidation.split_comparison(replace_variables)
+            left_calculated_answer = Evaluate.call_calculation_method(split_equation["left_equation"])
+            right_calculated_answer = Evaluate.call_calculation_method(split_equation["right_equation"])
             comparison_type = split_equation["comparison_type"]
+
+            response = Comparison.compare_values(left_calculated_answer, right_calculated_answer, comparison_type)
+
+            return response
+
 
 
