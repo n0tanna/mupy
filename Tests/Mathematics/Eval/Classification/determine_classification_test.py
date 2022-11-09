@@ -85,6 +85,12 @@ def test_determine_classification_incorrect_amount_of_operators2():
         Classification.determine_classification(equation)
 
 
+def test_determine_classification_incorrect_amount_of_operators3():
+    equation = ['2', '3', '=', '3', '6']
+    with pytest.raises(IncorrectAmountOfOperatorsError):
+        Classification.determine_classification(equation)
+
+
 def test_determine_classification_incorrect_character_error1():
     equation = ['2', 'b', '<', '3', '6']
     with pytest.raises(IncorrectCharacterError):

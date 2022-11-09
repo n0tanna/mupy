@@ -49,6 +49,10 @@ class Classification:
 
                 else:
                     equation_type = EquationIdentifiers.EQUATION
+                    equation_type = Classification.determine_variables(equation, equation_type, variables)
+
+                    if equation_type is EquationIdentifiers.EQUATION:
+                        raise IncorrectAmountOfOperatorsError
 
             else:
                 greater_than_count = equation.count('>')
@@ -85,7 +89,7 @@ class Classification:
                     equation_type = EquationIdentifiers.COMPARISON
 
                 elif equality_sign_count == 2:
-                    if first_equality_location == last_equality_location:
+                    if equation[first_equality_location + 1] == '=':
                         equation_type = EquationIdentifiers.COMPARISON
 
         else:
