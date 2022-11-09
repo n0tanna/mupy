@@ -1,0 +1,2 @@
+class NoVariableValueError(Exception):
+    pass
