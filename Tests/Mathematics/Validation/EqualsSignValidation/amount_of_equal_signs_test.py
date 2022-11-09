@@ -5,12 +5,12 @@ from Exceptions.OperatorErrors.TooManyEqualSignsError import TooManyEqualSignsEr
 
 def test_amount_of_equal_signs_no_sign1():
     equation = ['(', '2', '+', '2', ')', 'a']
-    assert EqualsSignValidation.amount_of_equal_signs(equation) == False
+    assert EqualsSignValidation.amount_of_equal_signs(equation) is False
 
 
 def test_amount_of_equal_signs_with_sign_1():
     equation = ['(', '2', '+', '2', ')', '=', 'a']
-    assert EqualsSignValidation.amount_of_equal_signs(equation) == True
+    assert EqualsSignValidation.amount_of_equal_signs(equation) is True
 
 
 def test_amount_of_equal_signs_incorrect_equals_sign_usage_1():

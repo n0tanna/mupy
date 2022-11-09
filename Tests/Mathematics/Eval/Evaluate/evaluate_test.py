@@ -84,3 +84,122 @@ def test_evaluate_decimals3():
     answer = Evaluate.evaluate(equation)
     assert answer == 0.3333333333333333
 
+
+def test_evaluate_comparison1():
+    equation = "2==3"
+    answer = Evaluate.evaluate(equation)
+    assert answer is False
+
+
+def test_evaluate_comparison2():
+    equation = "2==2"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison3():
+    equation = "2.1==2"
+    answer = Evaluate.evaluate(equation)
+    assert answer is False
+
+
+def test_evaluate_comparison4():
+    equation = "2.1==2"
+    answer = Evaluate.evaluate(equation)
+    assert answer is False
+
+
+def test_evaluate_comparison5():
+    equation = "2+4==6"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison6():
+    equation = "2+4==6+4"
+    answer = Evaluate.evaluate(equation)
+    assert answer is False
+
+
+def test_evaluate_comparison7():
+    equation = "(2+4)^2==36"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison8():
+    equation = "1 != 2"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison9():
+    equation = "-1(-2) != 2"
+    answer = Evaluate.evaluate(equation)
+    assert answer is False
+
+
+def test_evaluate_comparison10():
+    equation = "(3+4)^(9*4) != 2"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison11():
+    equation = "10+4>(1+1)"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison13():
+    equation = "-(10+4)>2"
+    answer = Evaluate.evaluate(equation)
+    assert answer is False
+
+
+def test_evaluate_comparison14():
+    equation = "-(10+4)<2"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison15():
+    equation = "-(10+4)<-(2+50*4)"
+    answer = Evaluate.evaluate(equation)
+    assert answer is False
+
+
+def test_evaluate_comparison16():
+    equation = "-(10+4)<=10"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison17():
+    equation = "10<=10"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison18():
+    equation = "-(10+4)<=-100"
+    answer = Evaluate.evaluate(equation)
+    assert answer is False
+
+
+def test_evaluate_comparison19():
+    equation = "-(10+4)>=-100"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison20():
+    equation = "100>=100"
+    answer = Evaluate.evaluate(equation)
+    assert answer is True
+
+
+def test_evaluate_comparison21():
+    equation = "10>=100"
+    answer = Evaluate.evaluate(equation)
+    assert answer is False

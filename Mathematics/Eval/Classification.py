@@ -89,7 +89,7 @@ class Classification:
                     equation_type = EquationIdentifiers.COMPARISON
 
                 elif equality_sign_count == 2:
-                    if first_equality_location == last_equality_location:
+                    if equation[first_equality_location + 1] == '=':
                         equation_type = EquationIdentifiers.COMPARISON
 
         else:

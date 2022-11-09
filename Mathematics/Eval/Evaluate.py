@@ -4,6 +4,7 @@ from Mathematics.Calculations.Bedmas import Bedmas
 from Mathematics.Eval.Classification import Classification
 from Mathematics.Enums.EquationIdentifers import EquationIdentifiers
 from Mathematics.Validation.ComparisonValidation import ComparisonValidation
+from Mathematics.Eval.Comparison import Comparison
 
 
 class Evaluate:
@@ -48,6 +49,10 @@ class Evaluate:
 
             left_calculated_answer = Evaluate.call_calculation_method(left_equation)
             right_calculated_answer = Evaluate.call_calculation_method(right_equation)
+
+            response = Comparison.compare_values(left_calculated_answer, right_calculated_answer, comparison_type)
+
+            return response
 
         elif equation_type is EquationIdentifiers.COMPARISON_VARIABLES:
             pass
