@@ -30,6 +30,9 @@ class Evaluate:
         if variables is None:
             variables = []
 
+        else:
+            pass
+
         equation = equation.replace(' ', '')
         equation = list(equation)
         equation_type = Classification.determine_classification(equation, variables)
@@ -55,5 +58,9 @@ class Evaluate:
             return response
 
         elif equation_type is EquationIdentifiers.COMPARISON_VARIABLES:
-            pass
+            split_equation = ComparisonValidation.split_comparison(equation)
+            left_equation = split_equation["left_equation"]
+            right_equation = split_equation["right_equation"]
+            comparison_type = split_equation["comparison_type"]
+
 

@@ -61,6 +61,13 @@ def test_split_comparison8():
         ComparisonIdentifiers.GREATER_THAN_OR_EQUAL}
 
 
+def test_split_comparison9():
+    comparison = ['2', '^', '3', '>', '=', '4', 'b']
+    validated_comparison = ComparisonValidation.split_comparison(comparison)
+    assert validated_comparison == {'left_equation': ['2', '^', '3'], 'right_equation': ['4', 'b'], 'comparison_type':
+        ComparisonIdentifiers.GREATER_THAN_OR_EQUAL}
+
+
 def test_split_comparison_incorrect_equal_sign_usage1():
     comparison = ['2', '^', '3', '=', '=', '=', '=', '4', '3']
     with pytest.raises(IncorrectEqualsSignUsageError):
