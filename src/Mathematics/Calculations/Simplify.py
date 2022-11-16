@@ -12,7 +12,7 @@ class Simplify:
                     current_element is not Operators.MULTIPLICATION.value):
                 if current_element in variables_dict:
                     if index != len(variable) - 1:
-                        if variable[index + 1] is Operators.EXPONENT:
+                        if variable[index + 1] is Operators.EXPONENT.value:
                             variables_dict[current_element] += variable[index + 2]
                         else:
                             variables_dict[current_element] += 1

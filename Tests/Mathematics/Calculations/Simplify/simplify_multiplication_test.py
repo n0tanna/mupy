@@ -48,6 +48,6 @@ def test_simplify_multiplication3():
 
     simplified = Simplify.simplify_multiplication(variables)
 
-    assert simplified == [[{'variable': [12.0, '*', 'b', '^', 5.0, '*', 'c']}, {'operator': ''}]]
+    assert simplified == [[{'variable': [12.0, '*', 'b', '^', 9.0, '*', 'c']}, {'operator': ''}]]
 
 
