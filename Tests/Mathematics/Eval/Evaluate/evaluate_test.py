@@ -73,6 +73,12 @@ def test_evaluate_variables1():
     assert answer == 3
 
 
+def test_evaluate_variables2():
+    equation = "((-b)+b)"
+    answer = Evaluate.evaluate(equation, "b=5")
+    assert answer == 0
+
+
 def test_evaluate_decimals1():
     equation = "(2+1.1)+(3+2.5)"
     answer = Evaluate.evaluate(equation)
