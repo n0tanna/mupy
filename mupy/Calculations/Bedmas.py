@@ -1,6 +1,6 @@
-from Mathematics.Calculations.Reciprocal import Reciprocal
-from Exceptions.MathematicErrors.DivisionByZeroError import DivisionByZeroError
-from Exceptions.ValidationErrors.MathematicsValidation.IncorrectExponentFormatError import IncorrectExponentFormatError
+from mupy.Calculations.Reciprocal import Reciprocal
+from mupy.Exceptions.MathematicErrors.DivisionByZeroError import DivisionByZeroError
+from mupy.Exceptions.ValidationErrors.MathematicsValidation.IncorrectExponentFormatError import IncorrectExponentFormatError
 
 
 class Bedmas:

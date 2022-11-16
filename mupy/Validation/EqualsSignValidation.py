@@ -1,5 +1,5 @@
-from Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
-from Exceptions.OperatorErrors.TooManyEqualSignsError import TooManyEqualSignsError
+from mupy.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
+from mupy.Exceptions.OperatorErrors.TooManyEqualSignsError import TooManyEqualSignsError
 
 
 class EqualsSignValidation:

@@ -1,6 +1,5 @@
-from Exceptions.ValidationErrors.VariableValidation.IncorrectVariableFormat import IncorrectVariableFormat
-from Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
-from Mathematics.Validation.EquationValidation import EquationValidation
+from mupy.Exceptions.ValidationErrors.VariableValidation.IncorrectVariableFormat import IncorrectVariableFormat
+from mupy.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
 
 
 class VariableInputParser:

@@ -1,4 +1,4 @@
-from Mathematics.Calculations.Bedmas import Bedmas
+from mupy.Calculations.Bedmas import Bedmas
 
 
 def test_replace_values_test_valid1():

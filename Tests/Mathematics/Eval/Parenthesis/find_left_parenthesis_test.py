@@ -1,6 +1,6 @@
 import pytest
-from Exceptions.UnknownErrors.UnknownError import UnknownError
-from Mathematics.Eval.Parentheses import Parentheses
+from mupy.Exceptions.UnknownErrors.UnknownError import UnknownError
+from mupy.Eval.Parentheses import Parentheses
 
 
 def test_find_left_parenthesis():

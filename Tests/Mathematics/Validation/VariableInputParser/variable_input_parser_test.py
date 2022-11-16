@@ -1,8 +1,8 @@
 import pytest
 
-from Mathematics.Validation.VariableInputParser import VariableInputParser
-from Exceptions.ValidationErrors.VariableValidation.IncorrectVariableFormat import IncorrectVariableFormat
-from Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
+from mupy.Validation.VariableInputParser import VariableInputParser
+from mupy.Exceptions.ValidationErrors.VariableValidation.IncorrectVariableFormat import IncorrectVariableFormat
+from mupy.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
 
 
 def test_variable_input_parser1():

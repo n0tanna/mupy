@@ -1,12 +1,12 @@
-from Mathematics.Eval.Parentheses import Parentheses
-from Mathematics.Validation.EquationValidation import EquationValidation
-from Mathematics.Calculations.Bedmas import Bedmas
-from Mathematics.Eval.Classification import Classification
-from Mathematics.Enums.EquationIdentifers import EquationIdentifiers
-from Mathematics.Validation.ComparisonValidation import ComparisonValidation
-from Mathematics.Eval.Comparison import Comparison
-from Mathematics.Validation.VariableInputParser import VariableInputParser
-from Mathematics.Calculations.ReplaceVariables import ReplaceVariables
+from mupy.Eval.Parentheses import Parentheses
+from mupy.Validation.EquationValidation import EquationValidation
+from mupy.Calculations.Bedmas import Bedmas
+from mupy.Eval.Classification import Classification
+from mupy.Enums.EquationIdentifers import EquationIdentifiers
+from mupy.Validation.ComparisonValidation import ComparisonValidation
+from mupy.Eval.Comparison import Comparison
+from mupy.Validation.VariableInputParser import VariableInputParser
+from mupy.Calculations.ReplaceVariables import ReplaceVariables
 
 
 class Evaluate:

@@ -1,4 +1,4 @@
-from Mathematics.Eval.Parentheses import Parentheses
+from mupy.Eval.Parentheses import Parentheses
 
 
 def test_parentheses_addition1():
