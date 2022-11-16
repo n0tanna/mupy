@@ -1,13 +1,13 @@
-from mupy.Eval.Parentheses import Parentheses
-from mupy.Validation.EqualsSignValidation import EqualsSignValidation
-from mupy.Enums.Operators import Operators
-from mupy.Enums.GroupingIdentifers import GroupingIdentifiers
-from mupy.Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharacterError
-from mupy.Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError import IncorrectDecimalFormatError
-from mupy.Exceptions.OperatorErrors.OperatorWithNoValuesError import OperatorWithNoValuesError
-from mupy.Exceptions.OperatorErrors.NoOperatorError import NoOperatorError
-from mupy.Exceptions.OperatorErrors.IncorrectAmountOfOperatorsError import IncorrectAmountOfOperatorsError
-from mupy.Exceptions.ValidationErrors.VariableValidation.IncorrectVariableFormat import IncorrectVariableFormat
+from Mathematics.Validation.ParenthesesValidation import ParenthesesValidation
+from Mathematics.Validation.EqualsSignValidation import EqualsSignValidation
+from Mathematics.Enums.Operators import Operators
+from Mathematics.Enums.GroupingIdentifers import GroupingIdentifiers
+from Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharacterError
+from Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError import IncorrectDecimalFormatError
+from Exceptions.OperatorErrors.OperatorWithNoValuesError import OperatorWithNoValuesError
+from Exceptions.OperatorErrors.NoOperatorError import NoOperatorError
+from Exceptions.OperatorErrors.IncorrectAmountOfOperatorsError import IncorrectAmountOfOperatorsError
+from Exceptions.ValidationErrors.VariableValidation.IncorrectVariableFormat import IncorrectVariableFormat
 
 
 class EquationValidation:
@@ -218,14 +218,14 @@ class EquationValidation:
             validated_left = EquationValidation.format_equation(split_equations[0])
             validated_right = EquationValidation.format_equation(split_equations[1])
 
-            are_there_parentheses_left = Parentheses.parenthesis_amount_validation(validated_left)
-            are_there_parentheses_right = Parentheses.parenthesis_amount_validation(validated_right)
+            are_there_parentheses_left = ParenthesesValidation.parenthesis_amount_validation(validated_left)
+            are_there_parentheses_right = ParenthesesValidation.parenthesis_amount_validation(validated_right)
 
             return {"left_equation": [validated_left, are_there_parentheses_left], "right_equation": [validated_right, are_there_parentheses_right]}
 
         else:
             validated = EquationValidation.format_equation(equation)
-            are_there_parentheses = Parentheses.parenthesis_amount_validation(validated)
+            are_there_parentheses = ParenthesesValidation.parenthesis_amount_validation(validated)
 
             return {"equation": [validated, are_there_parentheses]}
 

@@ -1,13 +1,19 @@
-# This is a sample Python script.
-from mupy.Eval.Evaluate import Evaluate
-from mupy.Eval.Classification import Classification
-from mupy.Validation.ComparisonValidation import ComparisonValidation
-from mupy.Validation.VariableInputParser import VariableInputParser
-from mupy.Calculations.ReplaceVariables import ReplaceVariables
+from mupy.Calculations.Expand import Expand
+from mupy.Calculations.Simplify import Simplify
 
-equation = list('1+1>2+3')
-number = Evaluate.evaluate("10b==100", "b=10")
-print(number)
+equation = [2.0, '*', 'b', '^', 3.0, '*', 3.0, '*', 'b', '*', 'c', '*', 2.0, 'b', '^', 5.0]
+variables = []
+index = 0
+
+while index < len(equation):
+    variable = Expand.group_variables(equation, index)
+    variables.append(variable)
+    index += len(variable["variable"]) + 1
+
+holder = Simplify.simplify_multiplication(variables)
+
+print(variables)
+print(holder)
 
 print("aa")
 
