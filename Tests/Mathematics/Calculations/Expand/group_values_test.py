@@ -1,4 +1,4 @@
-from Mathematics.Calculations.ExpandSimplify import ExpandSimplify
+from Mathematics.Calculations.Expand import Expand
 
 
 def test_group_values1():
@@ -8,7 +8,7 @@ def test_group_values1():
     equation_holder = equation
 
     while index < len(equation):
-        variable = ExpandSimplify.group_variables(equation_holder, index)
+        variable = Expand.group_variables(equation_holder, index)
         variables.append(variable)
         index += len(variable["variable"]) + 1
 
@@ -23,7 +23,7 @@ def test_group_values2():
     equation_holder = equation
 
     while index < len(equation):
-        variable = ExpandSimplify.group_variables(equation_holder, index)
+        variable = Expand.group_variables(equation_holder, index)
         variables.append(variable)
         index += len(variable["variable"]) + 1
 
@@ -39,7 +39,7 @@ def test_group_values3():
     equation_holder = equation
 
     while index < len(equation):
-        variable = ExpandSimplify.group_variables(equation_holder, index)
+        variable = Expand.group_variables(equation_holder, index)
         variables.append(variable)
         index += len(variable["variable"]) + 1
 
@@ -55,7 +55,7 @@ def test_group_values4():
     equation_holder = equation
 
     while index < len(equation):
-        variable = ExpandSimplify.group_variables(equation_holder, index)
+        variable = Expand.group_variables(equation_holder, index)
         variables.append(variable)
         index += len(variable["variable"]) + 1
 

@@ -1,6 +1,6 @@
 from Mathematics.Validation.ParenthesesValidation import ParenthesesValidation
 from Mathematics.Enums.Operators import Operators
-from Mathematics.Calculations.ExpandSimplify import ExpandSimplify
+from Mathematics.Calculations.Expand import Expand
 
 
 class VariableParentheses:
@@ -16,7 +16,7 @@ class VariableParentheses:
                 for index in range(left_parentheses + 1, right_parentheses):
                     parentheses_equation.append(equation[index])
 
-                simplified_equation = ExpandSimplify.expansion(parentheses_equation, exponent)
+                simplified_equation = Expand.expansion(parentheses_equation, exponent)
 
 
 

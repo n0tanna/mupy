@@ -1,7 +1,8 @@
 from Mathematics.Enums.Operators import Operators
+from Mathematics.Calculations.Simplify import Simplify
 
 
-class ExpandSimplify:
+class Expand:
     @staticmethod
     def group_variables(equation: list, index: int):
         term_value = []
@@ -32,13 +33,25 @@ class ExpandSimplify:
 
     @staticmethod
     def expansion(equation: list, exponent: int):
+        variables = []
+        simplified_equation = []
+        index = 0
+
+        while index < len(equation):
+            variable = ExpandSimplify.group_variables(equation, index)
+            variables.append(variable)
+            index += len(variable["variable"]) + 1
+
+        simplified_equation = variables
+
         for exponent in range(exponent):
-            variables = []
-            index = 0
-            while index < len(equation):
-                variable = ExpandSimplify.group_variables(equation, index)
-                variables.append(variable)
-                index += len(variable["variable"]) + 1
+            if exponent > 1:
+                pass
+
+
+
+
+
 
 
 
