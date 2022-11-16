@@ -1,6 +1,6 @@
-from Exceptions.ValidationErrors.VariableValidation.VariableNotFoundError import VariableNotFoundError
-from Mathematics.Enums.EquationIdentifers import EquationIdentifiers
-from Exceptions.ValidationErrors.VariableValidation.NoVariableValueError import NoVariableValueError
+from mupy.Exceptions.ValidationErrors.VariableValidation.VariableNotFoundError import VariableNotFoundError
+from mupy.Enums.EquationIdentifers import EquationIdentifiers
+from mupy.Exceptions.ValidationErrors.VariableValidation.NoVariableValueError import NoVariableValueError
 
 
 class ReplaceVariables:

@@ -1,7 +1,7 @@
 import pytest
-from Mathematics.Eval.Parentheses import Parentheses
-from Exceptions.ValidationErrors.NoClosingParenthesisError import NoClosingParenthesisError
-from Exceptions.ValidationErrors.NoOpeningParenthesisError import NoOpeningParenthesisError
+from mupy.Eval.Parentheses import Parentheses
+from mupy.Exceptions.ValidationErrors.NoClosingParenthesisError import NoClosingParenthesisError
+from mupy.Exceptions.ValidationErrors.NoOpeningParenthesisError import NoOpeningParenthesisError
 
 
 def test_parenthesis_amount_validation_equation1():

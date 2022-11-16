@@ -1,8 +1,8 @@
 import pytest
-from Exceptions.ValidationErrors.VariableValidation.VariableNotFoundError import VariableNotFoundError
-from Mathematics.Calculations.ReplaceVariables import ReplaceVariables
-from Mathematics.Enums.EquationIdentifers import EquationIdentifiers
-from Exceptions.ValidationErrors.VariableValidation.NoVariableValueError import NoVariableValueError
+from mupy.Exceptions.ValidationErrors.VariableValidation.VariableNotFoundError import VariableNotFoundError
+from mupy.Calculations.ReplaceVariables import ReplaceVariables
+from mupy.Enums.EquationIdentifers import EquationIdentifiers
+from mupy.Exceptions.ValidationErrors.VariableValidation.NoVariableValueError import NoVariableValueError
 
 
 def test_replace_variables1():

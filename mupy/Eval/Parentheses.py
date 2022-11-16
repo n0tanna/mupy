@@ -1,7 +1,7 @@
-from Exceptions.ValidationErrors.NoClosingParenthesisError import NoClosingParenthesisError
-from Exceptions.ValidationErrors.NoOpeningParenthesisError import NoOpeningParenthesisError
-from Exceptions.UnknownErrors.UnknownError import UnknownError
-from Mathematics.Calculations.Bedmas import Bedmas
+from mupy.Exceptions.ValidationErrors.NoClosingParenthesisError import NoClosingParenthesisError
+from mupy.Exceptions.ValidationErrors.NoOpeningParenthesisError import NoOpeningParenthesisError
+from mupy.Exceptions.UnknownErrors.UnknownError import UnknownError
+from mupy.Calculations.Bedmas import Bedmas
 
 
 class Parentheses:

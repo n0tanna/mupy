@@ -1,5 +1,5 @@
-from Mathematics.Eval.Comparison import Comparison
-from Mathematics.Enums.ComparisonOperator import ComparisonIdentifiers
+from mupy.Eval.Comparison import Comparison
+from mupy.Enums.ComparisonOperator import ComparisonIdentifiers
 
 
 def test_compare_values1():

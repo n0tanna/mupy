@@ -1,6 +1,6 @@
 import pytest
-from Mathematics.Validation.EqualsSignValidation import EqualsSignValidation
-from Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
+from mupy.Validation.EqualsSignValidation import EqualsSignValidation
+from mupy.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
 
 
 def test_find_equals_sign_incorrect_equals_sign_usage_1():

@@ -1,8 +1,8 @@
 import pytest
 
-from Mathematics.Validation.ComparisonValidation import ComparisonValidation
-from Mathematics.Enums.ComparisonOperator import ComparisonIdentifiers
-from Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
+from mupy.Validation.ComparisonValidation import ComparisonValidation
+from mupy.Enums.ComparisonOperator import ComparisonIdentifiers
+from mupy.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
 
 
 def test_split_comparison1():

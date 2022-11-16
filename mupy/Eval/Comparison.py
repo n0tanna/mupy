@@ -1,4 +1,4 @@
-from Mathematics.Enums.ComparisonOperator import ComparisonIdentifiers
+from mupy.Enums.ComparisonOperator import ComparisonIdentifiers
 
 
 class Comparison:

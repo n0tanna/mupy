@@ -1,5 +1,5 @@
-from Mathematics.Enums.ComparisonOperator import ComparisonIdentifiers
-from Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
+from mupy.Enums.ComparisonOperator import ComparisonIdentifiers
+from mupy.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
 
 
 class ComparisonValidation:
