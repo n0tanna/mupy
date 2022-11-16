@@ -5,8 +5,7 @@ from Mathematics.Variables.VariableParentheses import VariableParentheses
 from Mathematics.Calculations.Expand import Expand
 from Mathematics.Calculations.Simplify import Simplify
 
-equation = [2.0, '*', 'b', '^', 3.0, '*', 3.0, '*', 'b', '*', 'c',
-                '*', 2.0, '*', 'b', '*', 2.0, '*', 'b', '*', 'c', '*', 'c']
+equation = [2.0, '*', 'b', '^', 3.0, '*', 3.0, '*', 'b', '*', 'c', '*', 2.0, 'b', '^', 5.0]
 variables = []
 index = 0
 

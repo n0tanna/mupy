@@ -3,6 +3,83 @@ from Mathematics.Enums.Operators import Operators
 
 class Simplify:
     @staticmethod
+    def edit_values_dictionary(variable: list, variables_dict: dict, coefficients: list):
+        for index in range(len(variable)):
+            current_element = variable[index]
+
+            if (type(current_element) is str and
+                    current_element is not Operators.EXPONENT.value and
+                    current_element is not Operators.MULTIPLICATION.value):
+                if current_element in variables_dict:
+                    if index != len(variable) - 1:
+                        if variable[index + 1] is Operators.EXPONENT:
+                            variables_dict[current_element] += variable[index + 2]
+                        else:
+                            variables_dict[current_element] += 1
+
+                    else:
+                        variables_dict[current_element] += 1
+
+                else:
+                    variables_dict[current_element] = 1
+
+            if type(current_element) is float:
+                if index != 0:
+                    if variable[index - 1] is Operators.EXPONENT.value:
+                        continue
+
+                    else:
+                        coefficients.append(current_element)
+
+                else:
+                    coefficients.append(current_element)
+
+        return [coefficients, variables_dict]
+
+    @staticmethod
+    def build_values_dictionary(variable: list):
+        coefficients = []
+        variables = dict()
+
+        for index in range(len(variable)):
+            current_value = variable[index]
+            if (type(current_value) is str and
+                    current_value is not Operators.EXPONENT.value and
+                    current_value is not Operators.MULTIPLICATION.value):
+                if current_value in variables:
+                    if index != len(variable):
+                        if variable[index + 1] is Operators.EXPONENT.value:
+                            variables[current_value] += variable[index + 2]
+                        else:
+                            variables[current_value] += 1
+
+                    else:
+                        variables[current_value] += 1
+
+                else:
+                    if index != len(variable) - 1:
+                        if variable[index + 1] is Operators.EXPONENT.value:
+                            variables[current_value] = variable[index + 2]
+                        else:
+                            variables[current_value] = 1
+
+                    else:
+                        variables[current_value] = 1
+
+            if type(current_value) is float:
+                if index != 0:
+                    if variable[index - 1] is Operators.EXPONENT.value:
+                        continue
+
+                    else:
+                        coefficients.append(current_value)
+
+                else:
+                    coefficients.append(current_value)
+
+        return [coefficients, variables]
+
+    @staticmethod
     def simplify_multiplication(equation: list):
         new_variables = []
         for value in range(len(equation)):
@@ -31,107 +108,18 @@ class Simplify:
 
                 if new_variables and variable_operator is Operators.MULTIPLICATION.value:
                     variable_holder = new_variables[len(new_variables) - 1][0]["variable"]
-                    for index in range(len(variable_holder)):
-                        current_value = variable_holder[index]
-                        if (type(current_value) is str and
-                                current_value is not Operators.EXPONENT.value and
-                                current_value is not Operators.MULTIPLICATION.value):
-                            if current_value in variables:
-                                if index != len(variable_holder):
-                                    if variable_holder[index + 1] is Operators.EXPONENT.value:
-                                        variables[current_value] += variable_holder[index + 2]
-                                    else:
-                                        variables[current_value] += 1
+                    returned_values = Simplify.build_values_dictionary(variable_holder)
+                    coefficients = returned_values[0]
+                    variables = returned_values[1]
 
-                                else:
-                                    variables[current_value] += 1
-
-                            else:
-                                if index != len(variable_holder) - 1:
-                                    if variable_holder[index + 1] is Operators.EXPONENT.value:
-                                        variables[current_value] = variable_holder[index + 2]
-                                    else:
-                                        variables[current_value] = 1
-
-                                else:
-                                    variables[current_value] = 1
-
-                        if type(current_value) is float:
-                            if index != 0:
-                                if variable_holder[index - 1] is Operators.EXPONENT.value:
-                                    continue
-
-                                else:
-                                    coefficients.append(current_value)
-
-                            else:
-                                coefficients.append(current_value)
                 else:
-                    for index in range(len(current_variable)):
-                        current_value = current_variable[index]
-                        if (type(current_value) is str and
-                                current_value is not Operators.EXPONENT.value and
-                                current_value is not Operators.MULTIPLICATION.value):
-                            if current_value in variables:
-                                if index != len(current_variable) - 1:
-                                    if current_variable[index + 1] is Operators.EXPONENT.value:
-                                        variables[current_value] += current_variable[index + 2]
-                                    else:
-                                        variables[current_value] += 1
+                    returned_values = Simplify.build_values_dictionary(current_variable)
+                    coefficients = returned_values[0]
+                    variables = returned_values[1]
 
-                                else:
-                                    variables[current_value] += 1
-
-                            else:
-                                if index != len(current_variable) - 1:
-                                    if current_variable[index + 1] is Operators.EXPONENT.value:
-                                        variables[current_value] = current_variable[index + 2]
-                                    else:
-                                        variables[current_value] = 1
-
-                                else:
-                                    variables[current_value] = 1
-
-                        if type(current_value) is float:
-                            if index != 0:
-                                if current_variable[index - 1] is Operators.EXPONENT.value:
-                                    continue
-
-                                else:
-                                    coefficients.append(current_value)
-
-                            else:
-                                coefficients.append(current_value)
-
-                for element in range(len(next_variable)):
-                    current_element = next_variable[element]
-
-                    if (type(current_element) is str and
-                            current_element is not Operators.EXPONENT.value and
-                            current_element is not Operators.MULTIPLICATION.value):
-                        if current_element in variables:
-                            if element != len(next_variable) - 1:
-                                if next_variable[value + 1] is Operators.EXPONENT:
-                                    variables[current_element] += equation[value + 2]
-                                else:
-                                    variables[current_element] += 1
-
-                            else:
-                                variables[current_element] += 1
-
-                        else:
-                            variables[current_element] = 1
-
-                    if type(current_element) is float:
-                        if element != 0:
-                            if next_variable[element - 1] is Operators.EXPONENT.value:
-                                continue
-
-                            else:
-                                coefficients.append(current_element)
-
-                        else:
-                            coefficients.append(current_element)
+                edited_values = Simplify.edit_values_dictionary(next_variable, variables, coefficients)
+                coefficients = edited_values[0]
+                variables = edited_values[1]
 
                 if coefficients:
                     for element in coefficients:

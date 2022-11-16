@@ -34,15 +34,17 @@ class Expand:
     @staticmethod
     def expansion(equation: list, exponent: int):
         variables = []
-        simplified_equation = []
         index = 0
 
         while index < len(equation):
-            variable = ExpandSimplify.group_variables(equation, index)
+            variable = Expand.group_variables(equation, index)
             variables.append(variable)
             index += len(variable["variable"]) + 1
 
-        simplified_equation = variables
+        variables = Simplify.simplify_multiplication(variables)
+        variable_dict = Simplify.build_values_dictionary(variables)
+        simplified_variables = variables
+        simplified_variables_dict = variable_dict
 
         for exponent in range(exponent):
             if exponent > 1:
