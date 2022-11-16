@@ -1,4 +1,4 @@
-from Mathematics.Variables.VariableExistence import VariableExistence
+from src.Mathematics.Variables.VariableExistence import VariableExistence
 
 
 def test_find_if_variables_exist1():

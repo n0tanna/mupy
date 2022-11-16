@@ -6,13 +6,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="mupy",
+    name="src",
 
     version="0.0.1",
 
     author="notanna",
 
-    packages=setuptools.find_packages(include=['mupy', 'mupy.*']),
+    packages=setuptools.find_packages(include=['src', 'src.*']),
 
     include_package_data=True,
 

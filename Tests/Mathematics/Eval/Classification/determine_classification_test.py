@@ -1,10 +1,10 @@
 import pytest
-from mupy.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
-from mupy.Exceptions.OperatorErrors.IncorrectAmountOfOperatorsError import IncorrectAmountOfOperatorsError
-from mupy.Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharacterError
-from mupy.Exceptions.ValidationErrors.VariableValidation.VariableNotFoundError import VariableNotFoundError
-from mupy.Eval.Classification import Classification
-from mupy.Enums.EquationIdentifers import EquationIdentifiers
+from src.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
+from src.Exceptions.OperatorErrors.IncorrectAmountOfOperatorsError import IncorrectAmountOfOperatorsError
+from src.Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharacterError
+from src.Exceptions.ValidationErrors.VariableValidation.VariableNotFoundError import VariableNotFoundError
+from src.Mathematics.Eval.Classification import Classification
+from src.Mathematics.Enums.EquationIdentifers import EquationIdentifiers
 
 
 def test_determine_classification1():

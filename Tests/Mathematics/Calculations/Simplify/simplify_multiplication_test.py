@@ -1,5 +1,5 @@
-from mupy.Calculations.Simplify import Simplify
-from mupy.Calculations.Expand import Expand
+from src.Mathematics.Calculations.Simplify import Simplify
+from src.Mathematics.Calculations.Expand import Expand
 
 
 def test_simplify_multiplication1():

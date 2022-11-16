@@ -1,6 +1,6 @@
 import pytest
-from Exceptions.UnknownErrors.UnknownError import UnknownError
-from Mathematics.Validation.ParenthesesValidation import ParenthesesValidation
+from src.Exceptions.UnknownErrors.UnknownError import UnknownError
+from src.Mathematics.Validation.ParenthesesValidation import ParenthesesValidation
 
 
 def test_find_right_parenthesis1():

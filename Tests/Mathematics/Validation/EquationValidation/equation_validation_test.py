@@ -1,10 +1,10 @@
 import pytest
 
-from mupy.Validation.EquationValidation import EquationValidation
-from mupy.Exceptions.OperatorErrors.TooManyEqualSignsError import TooManyEqualSignsError
-from mupy.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
-from mupy.Exceptions.ValidationErrors.NoOpeningParenthesisError import NoOpeningParenthesisError
-from mupy.Exceptions.ValidationErrors.NoClosingParenthesisError import NoClosingParenthesisError
+from src.Mathematics.Validation.EquationValidation import EquationValidation
+from src.Exceptions.OperatorErrors.TooManyEqualSignsError import TooManyEqualSignsError
+from src.Exceptions.OperatorErrors.IncorrectEqualsSignUsageError import IncorrectEqualsSignUsageError
+from src.Exceptions.ValidationErrors.NoOpeningParenthesisError import NoOpeningParenthesisError
+from src.Exceptions.ValidationErrors.NoClosingParenthesisError import NoClosingParenthesisError
 
 
 def test_equation_validation_split_equation1():

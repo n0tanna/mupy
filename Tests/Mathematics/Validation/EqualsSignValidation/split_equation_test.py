@@ -1,4 +1,4 @@
-from mupy.Validation.EqualsSignValidation import EqualsSignValidation
+from src.Mathematics.Validation.EqualsSignValidation import EqualsSignValidation
 
 
 def test_split_equation1():

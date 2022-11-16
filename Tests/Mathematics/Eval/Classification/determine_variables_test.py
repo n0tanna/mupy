@@ -1,7 +1,7 @@
-from mupy.Eval.Classification import Classification
-from mupy.Enums.EquationIdentifers import EquationIdentifiers
-from mupy.Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharacterError
-from mupy.Exceptions.ValidationErrors.VariableValidation.VariableNotFoundError import VariableNotFoundError
+from src.Mathematics.Eval.Classification import Classification
+from src.Mathematics.Enums.EquationIdentifers import EquationIdentifiers
+from src.Exceptions.ValidationErrors.IncorrectCharacterError import IncorrectCharacterError
+from src.Exceptions.ValidationErrors.VariableValidation.VariableNotFoundError import VariableNotFoundError
 import pytest
 
 

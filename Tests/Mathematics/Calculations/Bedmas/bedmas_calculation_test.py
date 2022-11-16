@@ -1,7 +1,7 @@
 import pytest
-from mupy.Calculations.Bedmas import Bedmas
-from mupy.Exceptions.ValidationErrors.MathematicsValidation.IncorrectExponentFormatError import IncorrectExponentFormatError
-from mupy.Exceptions.MathematicErrors.DivisionByZeroError import DivisionByZeroError
+from src.Mathematics.Calculations.Bedmas import Bedmas
+from src.Exceptions.ValidationErrors.MathematicsValidation.IncorrectExponentFormatError import IncorrectExponentFormatError
+from src.Exceptions.MathematicErrors.DivisionByZeroError import DivisionByZeroError
 
 
 def test_bedmas_calculation_addition1():

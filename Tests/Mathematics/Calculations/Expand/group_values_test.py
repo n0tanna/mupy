@@ -1,4 +1,4 @@
-from mupy.Calculations.Expand import Expand
+from src.Mathematics.Calculations.Expand import Expand
 
 
 def test_group_values1():

@@ -1,4 +1,4 @@
-from mupy.Calculations.Reciprocal import Reciprocal
+from src.Mathematics.Calculations.Reciprocal import Reciprocal
 
 
 def test_get_reciprocal1():

@@ -1,6 +1,6 @@
 import pytest
-from mupy.Validation.EqualsSignValidation import EqualsSignValidation
-from mupy.Exceptions.OperatorErrors.TooManyEqualSignsError import TooManyEqualSignsError
+from src.Mathematics.Validation.EqualsSignValidation import EqualsSignValidation
+from src.Exceptions.OperatorErrors.TooManyEqualSignsError import TooManyEqualSignsError
 
 
 def test_amount_of_equal_signs_no_sign1():

@@ -1,6 +1,7 @@
 import pytest
-from mupy.Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError import IncorrectDecimalFormatError
-from mupy.Validation.EquationValidation import EquationValidation
+from src.Exceptions.ValidationErrors.MathematicsValidation.IncorrectDecimalFormatError \
+    import IncorrectDecimalFormatError
+from src.Mathematics.Validation.EquationValidation import EquationValidation
 
 
 def test_validate_number1():

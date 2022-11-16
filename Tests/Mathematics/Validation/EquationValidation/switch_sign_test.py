@@ -1,4 +1,4 @@
-from mupy.Validation.EquationValidation import EquationValidation
+from src.Mathematics.Validation.EquationValidation import EquationValidation
 
 
 def test_switch_sign1():
